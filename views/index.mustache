@@ -1,0 +1,9 @@
+{{#todos}}
+<ul>
+  <li><a href="/todos/{{id}}">{{title}}</a></li>
+</ul>
+{{/todos}}
+{{^todos}}
+<h2>No todos found</h2>
+{{/todos}}
+<a href="/todos/new" data-request="no-request">New</a>

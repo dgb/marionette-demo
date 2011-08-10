@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <script src="/js/mustache.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/marionette.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/mootools/1.3.2/mootools-yui-compressed.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+		window.addEvent('domready', function(){
+			var ready = function(){
+				new Element('a', {'href':'/todos', 'text':'Begin!'}).inject($('container'));
+			}
+			var app = new Marionette.Application('/templates', ready);
+		})
+    </script>
+
+  </head>
+  <body>
+    <div id="container">
+    </div>
+  </body>
+</html>
